@@ -1,17 +1,17 @@
-import { FC } from "react"
-import Sidebar from "../Sidebar/Sidebar"
-import cls from './Layout.module.css'
-import { Outlet } from "react-router-dom"
+import { FC } from "react";
+import Sidebar from "../Sidebar/Sidebar";
+import cls from "./Layout.module.css";
+import { Outlet } from "react-router-dom";
 
-const Layout:FC = () => {
+const Layout: FC = () => {
   return (
     <div className={cls.wrapper}>
-      <Sidebar/>
+      <Sidebar />
       <div className={cls.container}>
-        <Outlet/>
+        <Outlet />
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Layout
+export default Layout;

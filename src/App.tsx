@@ -1,14 +1,13 @@
-import { Theme } from '@radix-ui/themes';
-import AppRouter from './providers/Router/Router';
-import '@radix-ui/themes/styles.css';
+import { Theme } from "@radix-ui/themes";
+import AppRouter from "./providers/Router/Router";
+import "@radix-ui/themes/styles.css";
 
 function App() {
-
   return (
     <Theme>
-      <AppRouter/>
+      <AppRouter />
     </Theme>
-  )
+  );
 }
 
-export default App
+export default App;
