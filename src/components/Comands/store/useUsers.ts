@@ -12,7 +12,7 @@ interface IuseUsers {
 	changePermission: (param: IUser) => void
 	deleteUser: (param: string) => void
 	resetUsers: () => void
-	addUsers: (param: IUser, openAlert: () => void) => void
+	addUsers: (param: IUser, successAction: () => void) => void
 }
 
 export const useUsers = create<IuseUsers>(set => ({
@@ -40,13 +40,13 @@ export const useUsers = create<IuseUsers>(set => ({
 	resetUsers: () => {
 		set({ users: usersJson })
 	},
-	addUsers: (user, openAlert) => {
+	addUsers: (user, successAction) => {
 		set(prev => {
 			if (prev.users.find(item => user.email === item.email)) {
 				alert('Такой пользователь есть')
 				return prev
 			}
-			openAlert()
+			successAction()
 			return { users: [user, ...prev.users] }
 		})
 	},

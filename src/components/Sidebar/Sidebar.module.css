@@ -51,3 +51,5 @@
   width: 25px;
   height: 25px;
 }
+
+@media (max-width: 700px) {}

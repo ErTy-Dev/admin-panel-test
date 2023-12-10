@@ -28,9 +28,9 @@ const AddUser = () => {
 		addUsers({ email: email ?? '', permissions: permissions }, () => {
 			setAlertOpen(true)
 			setOpen(false)
+			setPermission([])
 		})
 	}
-
 	return (
 		<>
 			<Dialog.Root open={open} onOpenChange={open => setOpen(open)}>
