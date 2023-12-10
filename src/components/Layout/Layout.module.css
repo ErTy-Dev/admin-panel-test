@@ -1,5 +1,8 @@
 .wrapper {
-  position: relative;
+  display: flex;
 }
 
-.container {}
+.container {
+  padding: 53px 100px 50px 105px;
+  width: 100%;
+}
